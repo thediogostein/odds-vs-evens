@@ -21,26 +21,37 @@
   <body>
     <header class="header">
       <div class="wrapper">
-        <h1 class="header__title">Par ou ímpar</h1>
+        <h1 class="header__title">Odds or evens game</h1>
       </div>
     </header>
     <main>
       <div class="wrapper">
         <section class="odds-or-evens__container">
-          <h2 class="odds-or-evens__title">Escolha par ou ímpar</h2>
-          <div class="odds-or-evens__btnsContainer">
-            <button class="odds-or-evens__btn">Quero par</button>
-            <button class="odds-or-evens__btn">Quero ímpar</button>
+          <h2 class="odds-or-evens__title">Please choose</h2>
+          <div
+            class="odds-or-evens__btnsContainer"
+            id="odds-or-evens-container"
+          >
+            <button
+              class="odds-or-evens__btn"
+              id="btn-evens"
+              data-choice="evens"
+            >
+              Evens
+            </button>
+            <button class="odds-or-evens__btn" id="btn-odds" data-choice="odds">
+              Odds
+            </button>
           </div>
           <p class="odds-or-evens__userChoice">
-            Você escolheu:
-            <span class="odds-or-evens__userChoiceSpan">par</span>
+            Your choice is:
+            <span class="odds-or-evens__userChoiceSpan" id="user-choice"></span>
           </p>
         </section>
 
         <section class="numbers__container">
-          <h2 class="numbers__title">Escolha um número</h2>
-          <div class="numbers__btnsContainer">
+          <h2 class="numbers__title">Pick a number</h2>
+          <div class="numbers__btnsContainer" id="numbers-container">
             <button class="numbers__btn">0</button>
             <button class="numbers__btn">1</button>
             <button class="numbers__btn">2</button>
@@ -49,16 +60,11 @@
             <button class="numbers__btn">5</button>
           </div>
         </section>
-
-        <section>
-          <h2>O computador escolheu <span>par</span></h2>
-          <p>Você perdeu</p>
-        </section>
       </div>
     </main>
 
     <footer class="footer">
-      <div class="wrapper footer__wrapper">
+      <div class="wrapper">
         <p>
           Copyright - Diogo Stein
           <a href="https://github.com/thediogostein" target="_blank">
@@ -67,5 +73,15 @@
         </p>
       </div>
     </footer>
+    <aside>
+      <dialog>
+        <h1 id="dialog-text"></h1>
+        <p id="sum"></p>
+        <p id="dialog-text2"></p>
+        <p id="dialog-text3"></p>
+        <p id="dialog-text4"></p>
+        <button id="play-again">Play again</button>
+      </dialog>
+    </aside>
   </body>
 </html>
